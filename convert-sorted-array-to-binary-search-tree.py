@@ -1,9 +1,5 @@
 class Solution:
     def sortedArrayToBST(self, nums: List[int]) -> TreeNode:
-        
-        
-        
-        
         if not nums:
           return None
         
