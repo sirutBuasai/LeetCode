@@ -1,13 +1,11 @@
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
-        
         result = []
         nums.sort()
         
         for idx, val in enumerate(nums):
             if idx > 0 and val == nums[idx-1]:
                 continue
-                
             # left is the value after val, right is the last idx
             left = idx+1
             right = len(nums) - 1
@@ -26,4 +24,4 @@ class Solution:
                         left += 1
                     
         return result
-      
+    
