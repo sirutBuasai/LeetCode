@@ -6,8 +6,7 @@ class Solution:
           list1.append(tree.val)
           order(list1, tree.left)
           order(list1, tree.right)
-          
+
         result = []
         order(result, root)
         return result
-        

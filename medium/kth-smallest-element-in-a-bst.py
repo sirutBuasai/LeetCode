@@ -11,6 +11,5 @@ class Solution:
           curr = stack.pop()
           res.append(curr.val)
           curr = curr.right
-          
+
       return res[-1]
-      

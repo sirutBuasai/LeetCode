@@ -7,4 +7,3 @@ class Solution:
                 return [complement_d.get(complement), index]
             else:
                 complement_d[value] = index
-                

@@ -13,13 +13,12 @@ class Solution:
             dp[i] = max(dp[:i-1]) + nums[i]
 
           return max(dp[-1], dp[-2])
-      
+
         if len(nums) <= 3:
           return max(nums)
-        
+
         else:
           sub1 = rob_sublist(nums[:-1])
           sub2 = rob_sublist(nums[1:])
-          
+
           return max(sub1, sub2)
-        

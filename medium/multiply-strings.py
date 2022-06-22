@@ -9,7 +9,7 @@ class Solution:
           digit *= 10
           i -= 1
         return n
-      
+
       def convert_str(integer):
         s = ""
         while integer > 0:
@@ -19,6 +19,5 @@ class Solution:
           return "0"
         else:
           return s[::-1]
-      
+
       return convert_str(convert_int(num1) * convert_int(num2))
-        

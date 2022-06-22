@@ -15,12 +15,11 @@ class Solution:
             4    : "IV",
             1    : "I"
         }
-        
+
         ans = ""
-        
+
         for value in roman_dict:
             while num >= value:
                 ans += roman_dict[value]
                 num -= value
         return ans
-      

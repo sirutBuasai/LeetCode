@@ -8,12 +8,12 @@ class Solution:
             p1 += 1
             p2 = (p2+1) % len(string)
           return True
-      
+
         if len(s) != len(goal):
           return False
-                
+
         for i in range(len(s)):
           if s[i] == goal[0] and check_rotation(s, i, goal):
             return True
-            
+
         return False

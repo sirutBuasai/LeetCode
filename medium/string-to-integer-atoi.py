@@ -15,9 +15,9 @@ class Solution:
               cleaned += c
             else:
               return cleaned
-            
+
         return cleaned
-        
+
       def clamp(num):
         if num > ((2**31)-1):
           return ((2**31)-1)
@@ -25,7 +25,7 @@ class Solution:
           return (-2**31)
         else:
           return num
-        
+
       def convert(string):
         num = 0
         mult = 10**(len(string)-1)
@@ -34,17 +34,16 @@ class Solution:
           num += (mult*digit)
           mult //= 10
           string = string[1:]
-          
+
         return num
-      
+
       s = clean(s)
       if not s:
         return 0
-      
+
       if s[0] == '-':
         return clamp(convert(s[1:])*-1)
       elif s[0] == "+":
         return clamp(convert(s[1:]))
       else:
         return clamp(convert(s))
-        

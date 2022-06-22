@@ -7,16 +7,15 @@ class Solution:
         while l < r:
           while s[l] in punctuation and l < r:
             l += 1
-          
+
           while s[r] in punctuation and l < r:
             r -= 1
-            
+
           if s[l] != s[r]:
             return False
-          
+
           else:
             l += 1
             r -= 1
-          
+
         return True
-        

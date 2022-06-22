@@ -8,6 +8,5 @@ class Solution:
           while curr and prev.val == curr.val:
             prev.next = curr.next
             curr = curr.next
-            
+
         return head
-        

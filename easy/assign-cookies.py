@@ -8,6 +8,5 @@ class Solution:
         if s[i] >= g[j]:
           j += 1
         i += 1
-        
+
       return j
-        
