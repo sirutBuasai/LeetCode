@@ -23,4 +23,30 @@ class Solution:
             l2.next = self.mergeTwoLists(l1, l2.next)
             return l2
 
-        return l1
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
+
+        head = ListNode()
+        curr = head
+
+        while l1 and l2:
+            if l1 >= l2:
+                curr.next = l2
+                l2 = l2.next
+            else:
+                curr.next = l1
+                l1 = l1.next
+            curr = curr.next
+
+        if l1:
+            curr.next = l1
+        elif l2:
+            curr.next = l2
+
+        return head.next
