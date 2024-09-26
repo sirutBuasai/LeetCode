@@ -19,9 +19,21 @@ class MyQueue:
 
 
     def pop(self) -> int:
-        self.s1.pop()
+        x = self.s1.pop()
+
         if self.s1:
-            self.front = self.s1.peek()
+            self.front = self.s1.pop()
+            self.s2.append(self.front)
+
+            while self.s1:
+                self.s2.append(self.s1.pop())
+
+            while self.s2:
+                self.s1.append(self.s2.pop())
+        else:
+            self.front = None
+
+        return x
 
 
     def peek(self) -> int:
