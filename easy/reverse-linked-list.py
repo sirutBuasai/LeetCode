@@ -7,12 +7,27 @@ class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
 
         prev_node = None
-        current_node = head
 
-        while current_node:
-            temp_head = current_node.next
-            current_node.next = prev_node
-            prev_node = current_node
-            current_node = temp_head
+        while head:
+            temp_head = head.next
+            head.next = prev_node
+            prev_node = head
+            head = temp_head
+
+        return prev_node
+
+
+class Solution:
+    def reverseList(self, head: ListNode) -> ListNode:
+
+        prev_node = None
+
+        while head.next:
+            temp_head = head.next
+            head.next = prev_node
+            prev_node = head
+            head = temp_head
+
+        head.next = prev_node
 
         return prev_node
