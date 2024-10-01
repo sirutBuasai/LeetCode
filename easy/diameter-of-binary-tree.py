@@ -14,3 +14,20 @@ class Solution:
 
         find_height(root)
         return ans[0]
+
+
+class Solution:
+    def __init__(self) -> None:
+        self.diameter = 0
+
+    def find_height(self, tree) -> int:
+        if not tree:
+            return 0
+        left = self.find_height(tree.left)
+        right = self.find_height(tree.right)
+        self.diameter = max(self.diameter, left + right)
+        return 1 + max(left, right)
+
+    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        self.find_height(root)
+        return self.diameter
